@@ -212,7 +212,6 @@ legend.onAdd = function() {
 
 // Looping through our intervals to generate a label with a colored square for each interval.
   for (var i = 0; i < magnitudes.length; i++) {
-    //console.log(colors[i], magnitudes[i]);
     div.innerHTML += 
       "<i style='background-color:" + colors[i] + "'></i> " +
       magnitudes[i] + (magnitudes[i + 1] ? "&ndash;" + magnitudes[i + 1] + "<br>" : "+");
@@ -233,7 +232,6 @@ legend.onAdd = function() {
     }
   }
   var link ="https://raw.githubusercontent.com/fraxen/tectonicplates/master/GeoJSON/PB2002_boundaries.json";
-  //var link = "static/data/tectonicplates.json"
   // Use d3.json to make a call to get our Tectonic Plate geoJSON data.
   d3.json(link).then(function(data){
     L.geoJson(data,{
